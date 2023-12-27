@@ -1,0 +1,42 @@
+subject_domain_of_ships
+
+=> nrel_main_idtf:
+	[Предметная область судов]
+	(* <- lang_ru;; *);
+=> nrel_main_idtf:
+	[Subject domain of ships]
+	(* <- lang_en;; *);
+
+<- subject_domain;
+<- sc_node_struct;
+<- structure;
+
+
+<= nrel_private_subject_domain:
+	subject_domain_of_vehicles;
+
+=> nrel_private_subject_domain:
+	subject_domain_of_self_propelled_vessels;
+	subject_domain_of_warships;
+	subject_domain_of_sailing_vessels;
+
+-> rrel_maximum_studied_object_class:
+	ships;
+
+-> rrel_not_maximum_studied_object_class:
+	schooners;
+	cruise_liners;
+	catamarans;
+	tankers;
+	container_ships;
+	submarines;
+	fishing_vessels;
+	ferries;
+	seaplanes;
+	yachts;
+
+-> rrel_explored_relation:
+	nrel_captain;
+	nrel_navigator;
+	nrel_sailor;
+	nrel_cook;;

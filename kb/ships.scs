@@ -1,0 +1,167 @@
+sc_node_class_ship
+=> nrel_main_idtf:
+	[Судно]
+	(* <- lang_ru;; *);
+=> nrel_main_idtf:
+	[ship]
+	(* <- lang_en;; *);;
+
+sc_node_class_shooner
+=> nrel_main_idtf:
+	[шхуна]
+	(* <- lang_ru;; *);
+=> nrel_main_idtf:
+	[schooner]
+	(* <- lang_en;; *);;
+
+sc_node_class_cruise_liner
+=> nrel_main_idtf:
+	[круизный лайнер]
+	(* <- lang_ru;; *);
+=> nrel_main_idtf:
+	[cruise liner]
+	(* <- lang_en;; *);;
+
+sc_node_class_catamaran
+=> nrel_main_idtf:
+	[катамаран]
+	(* <- lang_ru;; *);
+=> nrel_main_idtf:
+	[catamaran]
+	(* <- lang_en;; *);;
+
+sc_node_class_tanker
+=> nrel_main_idtf:
+	[танкер]
+	(* <- lang_ru;; *);
+=> nrel_main_idtf:
+	[tanker]
+	(* <- lang_en;; *);;
+
+sc_node_class_container_ship
+=> nrel_main_idtf:
+	[контейнеровоз]
+	(* <- lang_ru;; *);
+=> nrel_main_idtf:
+	[container ship]
+	(* <- lang_en;; *);;
+
+sc_node_class_submarine
+=> nrel_main_idtf:
+	[подводная лодка]
+	(* <- lang_ru;; *);
+=> nrel_main_idtf:
+	[submarine]
+	(* <- lang_en;; *);;
+
+sc_node_class_fishing_vessel
+=> nrel_main_idtf:
+	[рыбацкое судно]
+	(* <- lang_ru;; *);
+=> nrel_main_idtf:
+	[fishing vessel]
+	(* <- lang_en;; *);;
+
+sc_node_class_ferry
+=> nrel_main_idtf:
+	[паром]
+	(* <- lang_ru;; *);
+=> nrel_main_idtf:
+	[ferry]
+	(* <- lang_en;; *);;
+
+sc_node_class_seaplane
+=> nrel_main_idtf:
+	[гидросамолет]
+	(* <- lang_ru;; *);
+=> nrel_main_idtf:
+	[seaplane]
+	(* <- lang_en;; *);;
+
+sc_node_class_yacht
+=> nrel_main_idtf:
+	[яхта]
+	(* <- lang_ru;; *);
+=> nrel_main_idtf:
+	[yacht]
+	(* <- lang_en;; *);;
+
+nrel_captain
+=> nrel_main_idtf:
+	[капитан*]
+	(* <- lang_ru;; *);
+=> nrel_main_idtf:
+	[captain*]
+	(* <- lang_en;; *);;
+
+nrel_navigator
+=> nrel_main_idtf:
+	[штурман*]
+	(* <- lang_ru;; *);
+=> nrel_main_idtf:
+	[navigator*]
+	(* <- lang_en;; *);;
+
+nrel_sailor
+=> nrel_main_idtf:
+	[моряк*]
+	(* <- lang_ru;; *);
+=> nrel_main_idtf:
+	[sailor*]
+	(* <- lang_en;; *);;
+
+nrel_cook
+=> nrel_main_idtf:
+	[кок*]
+	(* <- lang_ru;; *);
+=> nrel_main_idtf:
+	[cook*]
+	(* <- lang_en;; *);;
+
+subject_domain_of_self_propelled_vessels
+=> nrel_main_idtf:
+	[Предметная область самоходных судов]
+	(* <- lang_ru;; *);
+=> nrel_main_idtf:
+	[Subject domain of self_propelled_vessels]
+	(* <- lang_en;; *);;
+
+subject_domain_of_towed_vessels
+=> nrel_main_idtf:
+	[Предметная область несамоходных судов]
+	(* <- lang_ru;; *);
+=> nrel_main_idtf:
+	[subject domain of towed vessels]
+	(* <- lang_en;; *);;
+
+subject_domain_of_warships
+=> nrel_main_idtf:
+	[Предметная область кораблей]
+	(* <- lang_ru;; *);
+=> nrel_main_idtf:
+	[subject domain of warships]
+	(* <- lang_en;; *);;
+
+	section_subject_domain_of_towed_vessels
+=> nrel_main_idtf:
+	[Раздел. Предметная область буксируемых судов]
+	(* <- lang_ru;; *);
+=> nrel_main_idtf:
+	[Section. Subject domain of towed vessels]
+	(* <- lang_en;; *);;
+
+	section_subject_domain_of_transport_ships
+=> nrel_main_idtf:
+	[Раздел. Предметная область транспортных судов]
+	(* <- lang_ru;; *);
+=> nrel_main_idtf:
+	[Section. Subject domain of transport ships]
+	(* <- lang_en;; *);;
+
+	section_subject_domain_of_science_ships
+=> nrel_main_idtf:
+	[Раздел. Предметная область научных судоы]
+	(* <- lang_ru;; *);
+=> nrel_main_idtf:
+	[Section. Subject domain of science ships]
+	(* <- lang_en;; *);;

@@ -1,0 +1,42 @@
+section_subject_domain_of_ships
+=> nrel_main_idtf:
+	[Раздел. Предметная область суден]
+	(* <- lang_ru;; *);
+=> nrel_main_idtf:
+	[Section. Subject domain of ships]
+	(* <- lang_en;; *);
+=> nrel_idtf:
+	[Раздел базы знаний IMS, описывающий виды суден и людей, связанных с ними] 
+	(* <- lang_ru;; *);
+
+=> nrel_idtf:
+	[A section of the IMS knowledge base that describes the ships and the people connected]
+	(* <- lang_en;; *);
+
+
+<= nrel_section_decomposition:
+	{
+		section_subject_domain_of_warships;
+		section_subject_domain_of_transport_ships;
+		section_subject_domain_of_science_ships
+	};
+
+<- atomic_section;;
+
+sction_subject_domain_of_ships
+-> rrel_key_sc_element:
+	subject_domain_of_ships;
+	schooners;
+	cruise_liners;
+	catamarans;
+	tankers;
+	container_ships;
+	submarines;
+	fishing_vessels;
+	ferries;
+	seaplanes;
+	yachts;
+	nrel_captain;
+	nrel_navigator;
+	nrel_sailor;
+	nrel_cook;;
