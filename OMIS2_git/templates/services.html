@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block title %}Вид услуги{% endblock %}
+
+{% block content %}
+    <h1>Вид услуги</h1>
+    {% for service in services %}
+        <div class="post">
+            <h2><a href="{{ url_for('service_detail', service_name=service.name) }}">{{ service.name }}</a></h2>
+            <p><strong>Тематика:</strong> {{ service.theme }}</p>
+            <p><strong>Количество подписчиков:</strong> {{ service.subscribers }}</p>
+        </div>
+    {% endfor %}
+{% endblock %}

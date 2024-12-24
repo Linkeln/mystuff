@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Создание блога</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="auth-container">
+        <h1>Создание блога</h1>
+        <form method="post" enctype="multipart/form-data">
+            <label for="blog_name">Название блога:</label>
+            <input type="text" id="blog_name" name="blog_name" required>
+            <label for="blog_description">Описание блога:</label>
+            <textarea id="blog_description" name="blog_description" rows="4" cols="30"></textarea>
+            <label for="blog_service_type">Вид услуг:</label>
+            <input type="text" id="blog_service_type" name="blog_service_type" required>
+            <label for="blog_photo">Фото блога:</label>
+            <input type="file" id="blog_photo" name="blog_photo">
+            <button type="submit">Создать блог</button>
+        </form>
+        <div class="auth-buttons">
+            <a href="{{ url_for('main_page') }}">Назад к профилю</a>
+        </div>
+    </div>
+</body>
+</html>

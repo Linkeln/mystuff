@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+
+{% block title %}{{ service.name }}{% endblock %}
+
+{% block content %}
+    <h1>{{ service.name }}</h1>
+    <p><strong>Тематика:</strong> {{ service.theme }}</p>
+    <p><strong>Количество подписчиков:</strong> {{ service.subscribers }}</p>
+{% endblock %}

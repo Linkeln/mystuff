@@ -1,0 +1,58 @@
+{% extends 'base.html' %}
+
+{% block title %}Профиль {{ username }}{% endblock %}
+
+{% block content %}
+    <h1>Профиль {{ username }}</h1>
+    <div class="profile-info">
+        <img src="{{ url_for('static', filename='avatar.png') }}" alt="Аватар" class="avatar">
+        <div class="description">
+            <h2>Описание</h2>
+            <p>Текст описания пользователя {{ username }}</p>
+        </div>
+        <div class="services">
+            <h2>Вид услуг</h2>
+            <p>Текст вида услуг</p>
+        </div>
+    </div>
+    <button onclick="window.location.href='{{ url_for('subscribe', username=username) }}'">Подписаться</button>
+    <button onclick="toggleMessageForm()">Написать сообщение</button>
+    <form id="message-form" class="message-form" action="{{ url_for('send_message', username=username) }}" method="post">
+        <textarea id="message-text" name="message_text" rows="4" placeholder="Введите ваше сообщение здесь..." required></textarea>
+        <button type="submit">Отправить</button>
+    </form>
+    <h2>Посты</h2>
+    {% for post in posts %}
+        <div class="post">
+            <h2>{{ post.title }}</h2>
+            <p>{{ post.content }}</p>
+            <p><strong>Автор:</strong> <a href="{{ url_for('user_profile', username=post.author) }}">{{ post.author }}</a></p>
+            <p><strong>Дата:</strong> {{ post.date }}</p>
+            <h3>Комментарии:</h3>
+            {% for comment in post.comments %}
+                <div class="comment">
+                    <p><strong>{{ comment.author }}:</strong> {{ comment.text }}</p>
+                </div>
+            {% endfor %}
+            <form action="{{ url_for('add_comment', post_id=post.id) }}" method="post">
+                <label for="comment_text">Оставить комментарий:</label>
+                <input type="text" id="comment_text" name="comment_text" required>
+                <input type="hidden" name="comment_author" value="Гость">
+                <button type="submit">Отправить</button>
+            </form>
+            <h3>Реакции:</h3>
+            <p><strong>Количество реакций:</strong> {{ post.reactions }}</p>
+            <form action="{{ url_for('add_reaction', post_id=post.id) }}" method="post">
+                <button type="submit" name="reaction" value="😊">😊</button>
+                <button type="submit" name="reaction" value="👍">👍</button>
+                <button type="submit" name="reaction" value="❤️">❤️</button>
+            </form>
+        </div>
+    {% endfor %}
+    <script>
+        function toggleMessageForm() {
+            const messageForm = document.getElementById('message-form');
+            messageForm.style.display = messageForm.style.display === 'block' ? 'none' : 'block';
+        }
+    </script>
+{% endblock %}

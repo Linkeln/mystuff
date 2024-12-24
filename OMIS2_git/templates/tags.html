@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block title %}Теги{% endblock %}
+
+{% block content %}
+    <h1>Теги</h1>
+    <ul>
+        {% for tag in tags %}
+            <li><a href="{{ url_for('tag_posts', tag_name=tag.name) }}">{{ tag.name }}</a></li>
+        {% endfor %}
+    </ul>
+{% endblock %}
